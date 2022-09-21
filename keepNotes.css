@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFD24C;
+  outline: none;
+}
+
+/* input add note page */
+.addNoteField{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.74);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transform: scale(1);
+  transform-origin: top left;
+  transition: transform .3s ease;
+}
+.hideAddField{
+  transform: scale(0);
+}
+.addNoteDiv{
+  background-color: #F7F7F7;
+  width: 300px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.closeBtn{
+  position: absolute;
+  transform: translate(140px ,-168px);
+  cursor: pointer;
+}
+.addNoteDiv .addNoteContent h1{
+  font-size: 40px;
+  font-weight: 400;
+  border-bottom: 1px solid #ccc;
+}
+.addTitleDiv,.addDescDiv{
+  padding: 5px 0;
+}
+.addTitleDiv p,.addDescDiv p{
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+.addTitleDiv input{
+  height: 30px;
+  outline: none;
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  padding-left: 3px;
+}
+.addDescDiv textarea{
+  height: 120px;
+  outline: none;
+  resize: none;
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  padding-left: 3px;
+}
+.btnDiv{
+  width:100%;
+  text-align: center;
+  margin: 5px 0;
+}
+.addBtn{
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  background-color: #FFD24C;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ........................... */
+
+/* index page */
+
+.container{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,250px);
+  gap: 10px;
+}
+.content{
+  background-color: #F7F7F7;
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.addNotebtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #FFD24C;
+  border: 2px dashed #FFD24C;
+  cursor: pointer;
+}
+.addNote p{
+  margin: 5px 0;
+  color: #FFD24C;
+  font-size: 20px;
+}
+.noteDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F7F7;
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.noteTitle{
+  border-bottom: 1px solid #ccc ;
+  margin: 2px;
+  width: 100%;
+}
+.noteDesc{
+  display: flex;
+  height: 160px;
+  width: 100%;
+  color:grey;
+  font-size: 18px; 
+  
+}
+.notedetail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 4px;
+  color: darkgrey;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+}
+.notedetail .noteOpt{
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.options{
+  background-color:#F7F7F7;
+  position: absolute;
+  height: fit-content;
+  width:fit-content;
+  padding: 2px 4px;
+  border-radius: 5px;
+  transform: translate(-50px,-50px);
+  font-size: 15px;
+  color: #222;
+  opacity: 0;
+  transition: opacity 0.5s ease ;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15)
+}
+.noteOpt:hover .options{
+  opacity: 1 ;
+}
+.options ul{
+  list-style: none;
+}
+.options ul li{
+  cursor: pointer;
+}
+.options ul li:hover{
+background-color: #ccc;
+margin: 2px 0;
+}
