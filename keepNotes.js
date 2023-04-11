@@ -50,7 +50,8 @@ const notes = JSON.parse(localStorage.getItem("notes") || "[]");
 function showNote() {
   document.querySelectorAll(".noteDiv").forEach((note) => note.remove());
   notes.forEach((note, index) => {
-    let Notehtml = ` <div class="noteDiv">
+    if (note.desc !== "" &&  note.title !== "") {
+      let Notehtml = ` <div class="noteDiv">
                         <div class="note">
                              <h3 class="noteTitle" id="noteTitle">${note.title}</h3>
                              <span class="noteDesc">${note.desc}</span>
@@ -68,7 +69,8 @@ function showNote() {
                           </span>
                       </div>
                     </div>`;
-    addBox.insertAdjacentHTML("afterend", Notehtml);
+      addBox.insertAdjacentHTML("afterend", Notehtml);
+    }
   });
 }
 showNote();
